@@ -1,0 +1,137 @@
+/* Navigation Bar - Tag */
+nav {
+	column-span: all;
+}
+
+/* Navigation Bar - Menu */
+.navbar {
+  width: 100%;
+  background-color: rgb(146, 109, 109);
+  overflow: auto;
+}
+
+/* Navigation Bar - Link child */
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%;
+  text-align: center;
+}
+
+/* Navigation Bar - Background color on mouse-over */
+.navbar a:hover {
+  background-color: rgb(231, 103, 17);
+}
+
+/*Navigation Bar - current/active link */
+.navbar a.active {
+  background-color: #eb9e0e;
+}
+
+/* Navigation Bar - Add responsiveness */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left; /* If you want the text to be left-aligned on small screens */
+  }
+}
+
+/* Header - Tag */
+header {
+    background-color: rgb(127, 146, 255);
+	text-align: center;
+}
+
+/* Header - H1 child */
+header h1 {
+    margin: 0;
+}
+
+/* HMTL and Body - Tags */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main - Tag */
+main {
+	margin-left: 1.1em;
+	background-color: rgb(220, 226, 189);
+}
+
+/* Footer - Tag */
+footer {
+	margin-left: 1.1em;
+	background-color: rgb(194, 173, 153);
+}
+
+/* H2 */
+h2 {
+	font-family: 'Courier New', Courier, monospace;
+	color: brown;
+}
+
+/* H3 */
+h3 {
+	color: darkgreen;
+}
+
+/* Image of Melbourne City */
+#img_melbourne_city {
+	margin: 0 1.5em 1.5em 0;
+	float: left;
+	width: 60%;
+}
+
+/* Table Style in Table - Class */
+table.table_style {
+    font-size: 12px;
+    border: 1px solid rgb(226, 20, 147);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Table Data of Table Style Class - Tag */
+.table_style td {
+    padding: 4px;
+    margin: 3px;
+    border: 1px solid rgb(59, 9, 238);
+}
+
+/* Table Header of Table Style Class - Tag */
+.table_style th {
+    background-color: #104E8B;
+    color: #FFF;
+    font-weight: bold;
+}
+
+/* Section 3 - ID */
+#section_3 {
+	column-count: 3;
+	column-rule: solid rgb(127, 146, 255);
+}
+
+/* Table of some Victorian Universities - ID */
+#table_of_some_victorian_universities {
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
+
+/* Survey - ID */
+#survey {
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
+
+/* Calculate Total and Average Scores - ID */
+#calculate_total_and_average_scores {
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}

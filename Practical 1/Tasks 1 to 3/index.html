@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+
+<head>
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the page -->
+    <title>SIT120 - Practical 1</title>
+
+    <!-- Internal CSS -->
+    <style type="text/css">
+        body {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+
+<!-- Body -->
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1 style="color: rgb(23, 10, 140);">Victorian Universities Portal</h1>
+    </header>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <a class="active" href="#">Home</a>
+        <a href="#">Search</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Section 1 -->
+        <div id="secion_1">
+
+            <!-- Heading for "City of Melbourne" with reference to open page in new tabe -->
+            <h2><a href="https://universityreviews.com.au/list-of-universities/victoria/" target="_blank">Link to
+                    Victorian
+                    Universities</a></h2>
+
+            <!-- Button that displays the Date and Time when clicked on -->
+            <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+                Click to display Date and Time.</button>
+            <p id="demo"></p>
+
+        </div>
+
+
+        <!-- Section 2 -->
+        <div id="section_2">
+
+            <!-- Image of Melbourne City -->
+            <img id="img_melbourne_city"
+                src="https://www.jacobs.com/sites/default/files/styles/1070xh/public/2019-10/Melbourne_HERO.jpg?itok=DHooW7aC"
+                alt="Melbourne City">
+
+            <!-- Form for Current Students -->
+            <form action="/login">
+                <h2>Current Students</h2>
+                <h3>Log In</h3>
+
+                <div>
+                    <!-- Student Number -->
+                    <label for="student_number">Student Number</label>
+                    <input type="text" id="student_number" name="fn" placeholder="Number" required>
+                </div>
+
+                <div>
+                    <!-- Password -->
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="ln" placeholder="Password" required>
+                </div>
+                <br>
+                <button type="submit">Log In</button>
+            </form>
+
+            <br>
+
+            <!-- Form for Future Students -->
+            <form action="/register">
+
+                <h2>Future Students</h2>
+                <h3>Register</h3>
+
+                <div>
+                    <!-- First Name -->
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="fn" placeholder="First Name" required>
+                </div>
+
+                <div>
+                    <!-- Last Name -->
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="fn" placeholder="Last Name" required>
+                </div>
+
+                <div>
+                    <!-- Email -->
+                    <label for="email">Email</label>
+                    <input type="text" id="first_name" name="fn" placeholder="First Name" required>
+                </div>
+                <br>
+                <button type="submit">Log In</button>
+            </form>
+
+        </div>
+
+        <!-- Section 3 -->
+        <div id="section_3" style="clear: both;">
+
+            <!-- Table of some Victorian Universities -->
+            <div>
+                <table class="table_style" id="table_of_some_victorian_universities">
+                    <thead>
+                        <h2>Some Victorian Universities</h2>
+                        <tr class="tableizer-firstrow">
+                            <th>University</th>
+                            <th>Number of Students</th>
+                            <th>Campuses</th>
+                            <th>Founded</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Deakin University -->
+                        <tr>
+                            <td>Deakin University</td>
+                            <td>53,314 (2015)</td>
+                            <td>Cloud</td>
+                            <td>1974</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>Burwood</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>Geelong</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>Waurn Ponds</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>Cloud</td>
+                        </tr>
+
+                        <!-- University of Melbourne -->
+                        <tr>
+                            <td>University of Melbourne</td>
+                            <td>48,088 (2016)</td>
+                            <td>Parkville</td>
+                            <td>1853</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>Burnley</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>Southbank</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>Werribee</td>
+                        </tr>
+
+                        <tr>
+                            <td>RMIT</td>
+                            <td>84,267 (2016)</td>
+                            <td>Melbourne</td>
+                            <td>1887</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>Bundoora</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Form for Survey -->
+            <div>
+                <form action="survey" id="survey">
+                    <div>
+                        <h2>Survey</h2>
+
+                        <label for="pick_university">
+                            <h3>Pick Your University of Choice</h3>
+                        </label>
+
+                        <div>
+                            <input type="radio" id="deakin_university" name="pick_university" value="deakin">
+                            <label for="deakin_university">Deakin University</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="university_of_melbourne" name="pick_university" value="uom">
+                            <label for="university_of_melbourne">University of Melbourne</label>
+                        </div>
+
+
+                        <div>
+                            <input type="radio" id="rmit" name="pick_university" value="rmit">
+                            <label for="rmit">RMIT</label>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h3>Pick Your Discipline</h3>
+                        <!-- Dropdown -->
+                        <div>
+                            <label for="discipline_dropdown">Discipline</label>
+                            <select name="animal" id="animal_dropdown">
+                                <option value="engineering">Engineering</option>
+                                <option value="it" selected>IT</option>
+                                <option value="healt_sciences">Health Sciences</option>
+                                <option value="arts">Arts</option>
+                            </select>
+                        </div>
+                        <br>
+                        <button type="submit">Send</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Calculate Total and Average Scores -->
+            <div>
+                <form action="/total_and_average_score" id="calculate_total_and_average_scores">
+                    <h2>Calculate Total and Average Scores</h2>
+
+                    <h3>Enter your scores</h3>
+
+                    <!-- 1st Score -->
+                    <div>
+                        <label for="1st_score">1st Score</label>
+                        <input class="score" type="text" id="1st_score" name="1st_score" placeholder="Score" required>
+                    </div>
+
+                    <!-- 2nd Score -->
+                    <div>
+                        <label for="2nd_score">2nd Score</label>
+                        <input class="score" type="text" id="2nd_score" name="2nd_score" placeholder="Score" required>
+                    </div>
+
+                    <!-- 3rd Score -->
+                    <div>
+                        <label for="3rd_score">3rd Score</label>
+                        <input class="score" type="text" id="3rd_score" name="3rd_score" placeholder="Score" required>
+                    </div>
+
+                    <!-- 4th Score -->
+                    <div>
+                        <label for="3rd_score">4th Score</label>
+                        <input class="score" type="text" id="3rd_score" name="3rd_score" placeholder="Score" required>
+                    </div>
+
+                    <button id="button_calculate_total_score" style="margin-top: 20px;" type="button">Calculate Total
+                        and
+                        Average
+                        Scores</button>
+
+                    <div>
+                        <h3>The total score is: </h3>
+                        <p id="total_score"></p>
+                    </div>
+
+                    <div>
+                        <h3>The average score is: </h3>
+                        <p id="average_score"></p>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+<br>
+
+<!-- Footer -->
+<footer>
+    <br>
+    <small>By Peter Tieu <br><i> Copyright &copy; 2017 Deakinsoft Pty Ltd. </i> </small>
+</footer>
+
+<script src="app.js"></script>
+
+</html>
