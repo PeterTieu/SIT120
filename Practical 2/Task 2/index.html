@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>World Tour Centre</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="style.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Poppins", sans-serif
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+
+    .w3-half img:hover {
+        opacity: 1
+    }
+</style>
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>World Tour<br>Centre</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+            <a href="#where_we_take_you" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Where We Take
+                You</a>
+            <a href="#about_our_tour_guides" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Our
+                Tours</a>
+            <a href="#tour_guides" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Tour Guides</a>
+            <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>World Tour Centre</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="where_we_take_you">
+            <h1 class="w3-jumbo"><b>World Tour Centre</b></h1>
+            <h1 class="w3-xxxlarge w3-text-red"><b>Where We Take You</b></h1>
+            <hr style="width:50px;border:5px solid orange" class="w3-round">
+        </div>
+
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+                    style="width:100%" onclick="onClick(this)" alt="Eiffel Tower">
+                <img src="https://images.unsplash.com/photo-1608037521277-154cd1b89191?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    style="width:100%" onclick="onClick(this)" alt="Great Wall of China">
+                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+                    style="width:100%" onclick="onClick(this)" alt="Taj Mahal">
+            </div>
+
+            <div class="w3-half">
+                <img src="https://images.unsplash.com/photo-1527915676329-fd5ec8a12d4b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+                    style="width:100%" onclick="onClick(this)" alt="Sydney Opera House">
+                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    style="width:100%" onclick="onClick(this)" alt="Pyramids of Giza">
+                <img src="https://images.unsplash.com/photo-1543429776-2782fc8e1acd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    style="width:100%" onclick="onClick(this)" alt="Leaning Tower of Pisa">
+            </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About Our Tour -->
+        <div class="w3-container" id="about_our_tour_guides" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>About Our Tours</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni accusantium ducimus tempore reprehenderit
+                eius vero recusandae vel ipsam modi ratione repellat amet, expedita quae numquam fugiat quasi facilis
+                architecto praesentium! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae ullam nisi
+                totam dolorum tempora numquam. At quo dignissimos, sunt earum quam veniam saepe ducimus corporis
+                ratione. Cupiditate amet quia quis! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+                maiores quaerat illum. Dolorum, necessitatibus unde! Saepe dignissimos ad quod magnam facilis impedit
+                suscipit accusamus quisquam unde natus. Quasi, quas dolorum!
+            </p>
+        </div>
+
+        <!-- Tour Guides -->
+        <div class="w3-container" id="tour_guides" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Tour Guides</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>The best team in the world.</p>
+            <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+            <p><b>Our designers are thoughtfully chosen</b>:</p>
+        </div>
+
+        <!-- Tour Guides Information -->
+        <div class="w3-row-padding w3-grayscale">
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                    <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+                    <div class="w3-container">
+                        <h3>John Doe</h3>
+                        <p class="w3-opacity">Asia</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                            elementum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                    <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Jane Doe</h3>
+                        <p class="w3-opacity">Europe</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                            elementum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                    <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Mike Ross</h3>
+                        <p class="w3-opacity">Americas</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                            elementum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Packages / Pricing Tables -->
+        <div class="w3-container" id="packages" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt atque impedit numquam</p>
+        </div>
+
+        <div class="w3-row-padding">
+            <div class="w3-half w3-margin-bottom">
+                <ul class="w3-ul w3-light-grey w3-center">
+                    <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+                    <li class="w3-padding-16">Feature 1</li>
+                    <li class="w3-padding-16">Feature 2</li>
+                    <li class="w3-padding-16">Feature 3</li>
+                    <li class="w3-padding-16">Feature 4</li>
+                    <li class="w3-padding-16">Feature 5</li>
+                    <li class="w3-padding-16">
+                        <h2>$ 2500</h2>
+                        <span class="w3-opacity">per person</span>
+                    </li>
+                    <li class="w3-light-grey w3-padding-24">
+                        <button class="w3-button w3-white w3-padding-large w3-hover-black">Boook</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="w3-half">
+                <ul class="w3-ul w3-light-grey w3-center">
+                    <li class="w3-red w3-xlarge w3-padding-32">Ultimate</li>
+                    <li class="w3-padding-16">Feature 1</li>
+                    <li class="w3-padding-16">Feature 2</li>
+                    <li class="w3-padding-16">Feature 3</li>
+                    <li class="w3-padding-16">Feature 4</li>
+                    <li class="w3-padding-16">Feature 5</li>
+                    <li class="w3-padding-16">
+                        <h2>$ 4500</h2>
+                        <span class="w3-opacity">per person</span>
+                    </li>
+                    <li class="w3-light-grey w3-padding-24">
+                        <button class="w3-button w3-red w3-padding-large w3-hover-black">Book</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="w3-container" id="contact" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus placeat nam mollitia modi
+                quidem et nulla alias ab iure, laborum dignissimos voluptas odit reiciendis quam delectus minima quo
+                doloribus!</p>
+            <form action="/action_page.php" target="_blank">
+                <div class="w3-section">
+                    <label>Name</label>
+                    <input class="w3-input w3-border" type="text" name="Name" required>
+                </div>
+                <div class="w3-section">
+                    <label>Email</label>
+                    <input class="w3-input w3-border" type="text" name="Email" required>
+                </div>
+                <div class="w3-section">
+                    <label>Message</label>
+                    <input class="w3-input w3-border" type="text" name="Message" required>
+                </div>
+                <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send
+                    Message</button>
+            </form>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+
+
+</body>
+
+</html>
