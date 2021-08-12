@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Vue framework -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Page Title -->
+    <title id="page_title">{{pageTitle}}</title>
+</head>
+
+<body>
+
+    <!-- Page Heading -->
+    <h1 id="page_heading">{{pageHeading}}</h1>
+
+    <!-- Link component -->
+    <div id="link_component">
+        {{message}}
+        <a v-bind:href="websiteLink" target="_blank">Visit Australia</a>
+    </div>
+
+    <!-- Time and date -->
+    <h2 id="time_and_date">{{timeAndDate}}</h2>
+
+    <br>
+
+    <!-- List of Australian Landmarks Component -->
+    <div id="list_of_australian_landmarks_component">
+
+        <div id="list_of_australian_landmarks_heading">
+            <h2>{{ListOfAustralianLandmarksHeading}}</h2>
+            <h3 id="list_of_australian_landmarks_heading_message">{{message}}</h3>
+        </div>
+
+        <ul id="list_of_australian_landmarks">
+            <li v-for="landmark in landmarks" @mouseover="revealLandmark(landmark.landmarkPicture)">
+                {{landmark.landmarkName}}
+            </li>
+        </ul>
+
+        <img v-bind:src="pictureOfLandmark" alt="Picture" id="australian_landmark_picture">
+    </div>
+
+    <!-- Secret Text -->
+    <h2 id="hover_for_secret_message_text" v-bind:title="hiddenMessage" id="">
+        {{message}}
+    </h2>
+
+    <!-- Rate Your Visit Component -->
+    <div id="rate_your_visit_component">
+        <button v-on:click="increaseRating">{{buttonText}}</button>
+
+        <div id="rating">
+            <div v-if="!isMaxRatingReached">{{rating}}</div>
+            <div v-if="isMaxRatingReached">{{errorMessage}}</div>
+        </div>
+
+        <h3>{{warningMessage}}</h3>
+    </div>
+
+    <br>
+
+    <!-- Information Component -->
+    <div id="information_component">
+        <h2> {{informationHeading}}</h2>
+        <p id="information_text">{{information}}</p>
+    </div>
+
+
+    <!-- Link to JS file -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>

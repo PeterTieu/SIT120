@@ -1,0 +1,82 @@
+body {
+    margin-bottom: 5%;
+    background-color:peachpuff;
+}
+
+h1 {
+    font-size: 3em;
+    color: yellow;
+}
+
+h2 {
+    color: rgb(41, 71, 162);
+}
+
+li {
+    font-size: 1.5em;
+}
+
+button {
+    font-size: 2em;
+}
+
+#page_heading {
+    background-color: rgb(14, 148, 59);
+    display:flex;
+    justify-content: center;
+}
+
+#time_and_date {
+    color: green;
+}
+
+#australian_landmark_picture {
+    width: 40%;
+    float: left;
+    margin-right: 3%;
+}
+
+#list_of_australian_landmarks_heading_message {
+    color: red;
+}
+
+#list_of_australian_landmarks>li:nth-child(odd) {
+    color: rgb(187, 71, 255);
+}
+
+#list_of_australian_landmarks>li:hover {
+    background-color: rgb(71, 237, 255);
+}
+
+
+
+#hover_for_secret_message_text{
+    color: red;
+}
+
+#rate_your_visit_component {
+    background-color: rgb(240, 227, 46);
+}
+
+#list_of_australian_landmarks_component {
+    background-color: greenyellow;
+}
+
+#hover_for_secret_message_text {
+    color: red;
+}
+
+#rating {
+    display: flex;
+    padding-left: 8%;
+    padding-top: 3%;
+    font-size: 4em;
+}
+
+#information_component {
+    background-color: greenyellow;
+}
+
+#information_text {
+    font-size: 1.1em;
+}
