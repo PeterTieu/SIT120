@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Vue framework -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Page Title -->
+    <title id="page_title">{{pageTitle}}</title>
+</head>
+
+<body>
+    <h1>Composing with Components</h1>
+
+    <br>
+
+    <!-- List Container -->
+    <div id="list_container">
+
+        <h2>List</h2>
+
+        <ol>
+            <list-item v-for="list_item in list" v-bind:list_item_prop="list_item.description"></list-item>
+        </ol>
+    </div>
+
+    <br>
+
+    <!-- Word Scrambler Container -->
+    <div id="word_scrambler_container">
+        <h2>Word Scrambler</h2>
+        <h4>Click each button below to unscramble the word <br /> inside it to its original form!</h4>
+        <word-unscramble-button original_word="welcome"></word-unscramble-button>
+        <word-unscramble-button original_word="to"></word-unscramble-button>
+        <word-unscramble-button original_word="the"></word-unscramble-button>
+        <word-unscramble-button original_word="remarkably"></word-unscramble-button>
+        <word-unscramble-button original_word="awesome"></word-unscramble-button>
+        <word-unscramble-button original_word="word"></word-unscramble-button>
+        <word-unscramble-button original_word="scrambler"></word-unscramble-button>
+        <word-unscramble-button original_word="game"></word-unscramble-button>
+    </div>
+
+</body>
+
+
+<!-- Link to JS file -->
+<script src="app.js"></script>
+
+</html>
