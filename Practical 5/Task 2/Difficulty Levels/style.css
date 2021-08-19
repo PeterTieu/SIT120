@@ -1,0 +1,56 @@
+body {
+    text-align: center;
+    background-color: rgb(215, 199, 228);
+}
+
+h1 {
+    color: rgb(243, 77, 0);
+}
+
+
+h4 {
+    color: rgb(160, 68, 235);
+}
+
+#difficulty_levels_container {
+  display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+#difficulty_level_component {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1%;
+    padding: 1%;
+}
+
+/* Button: "Beginner" */
+#difficulty_level_component:nth-child(2) button {
+  background-color:#EF9595;
+}
+
+/* Button: "Novice" */
+#difficulty_level_component:nth-child(3) button {
+  background-color:#EFD195;
+}
+
+/* Button: "Medium" */
+#difficulty_level_component:nth-child(4) button {
+  background-color: #97EF95;
+}
+
+/* Button: "Advanced" */
+#difficulty_level_component:nth-child(5) button {
+  background-color:#95B9EF;
+}
+
+/* Button: "Legendary" */
+#difficulty_level_component:nth-child(6) button {
+  background-color:#D895EF;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Vue framework -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Page Title -->
+    <title id="page_title">{{pageTitle}}</title>
+</head>
+
+<body>
+
+    <!-- Countries Container -->
+    <div id="difficulty_levels_container">
+
+        <h1>Difficulty Levels</h1>
+
+        <!-- Difficulty Level Component -->
+        <difficulty-level-component id="difficulty_level_component" v-for="difficulty_level in difficulty_levels"
+            v-bind:difficulty_level="difficulty_level.level" v-bind:button_color="difficulty_level.color">
+        </difficulty-level-component>
+
+    </div>
+
+</body>
+
+<!-- Link to JS file -->
+<script src="app.js"></script>
+
+</html>
