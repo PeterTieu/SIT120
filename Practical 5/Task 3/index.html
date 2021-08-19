@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Vue framework -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Page Title -->
+    <title id="page_title">{{pageTitle}}</title>
+</head>
+
+<body>
+
+    <h1>Handling User Inputs</h1>
+
+    <br>
+
+    <!-- Convert Decimal to Binary Container -->
+    <div id="convert_decimal_to_binary_container">
+        <h2>Convert Decimal to Binary</h2>
+        <br>
+        <h3>
+            Decimal input:
+            <input id="decimal_input" v-model="decimal">
+        </h3>
+        <button v-on:click="conver_decimal_to_binary()">Convert to Binary</button>
+        <div><br></div>
+        <div>
+            <h3>Binary output: </h3>
+            <p id="binary_output"> => {{binary}} </p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Score Tracker Container -->
+    <div id="score_tracker_container">
+
+        <h2>Score Tracker</h2>
+        <h3>First player to score 5 wins!</h3>
+        <div id="scores_container">
+
+            <div class="individual_score_container">
+                <h4>{{player1_score}} </h4>
+                <button v-on:click="player1_increment_score">Player 1+</button>
+            </div>
+
+            <div id="game_status_container">
+                <h4 class="game_status_container_text" v-if="isGameOver">{{gameStatus}} </h4>
+                <h4 class="game_status_container_text" v-else>{{gameStatus}}</h4>
+            </div>
+
+            <div class="individual_score_container">
+                <h4>{{player2_score}} </h4>
+                <button v-on:click="player2_increment_score">Player 2+</button>
+            </div>
+        </div>
+
+        <div id="restart_game_button_container">
+            <button v-on:click="restart_game">RESTART GAME</button>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+<!-- Link to JS file -->
+<script src="app.js"></script>
+
+</html>
