@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Include the Vue framework-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Set responsiveness to screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Add image icon to the title -->
+    <link rel="shortcut icon" type="image/x-icon" href="Assets/globe_icon.png">
+
+    <!-- Set the title -->
+    <title>Results</title>
+</head>
+
+
+<!-- Header Section -->
+
+<header>
+    <!--Navigation bar-->
+    <div id="nav" class="nav">
+        <!--Logo image linking to Home Page-->
+        <a href="flags_challenge.html"><img id="logo" src="Assets/GeoTopium_logo.PNG"></img></a>
+
+        <!-- Anchor Tags to link to other pages -->
+        <a id="nav" href="flags_challenge.html">Home</a>
+        <a id="nav" href="flags_challenge.html" style="color: yellow;">Flags</a>
+        <a id="nav" href="flags_challenge.html">Countries</a>
+        <a id="nav" href="flags_challenge.html">Search</a>
+        <a id="nav" href="flags_challenge.html">Contact</a>
+
+        <!--Drop-down menu icon - visible on smaller screen sizes-->
+        <a id="nav" class="icon" href="javascript:void(0);" onclick="resizeNav()"><img class="icon"
+                src="Assets/three_line_icon.png"></img></a>
+    </div>
+
+</header>
+
+
+<!-- Body Section -->
+<!-- Components within: Side Panel, Question, Footer -->
+
+<body>
+
+    <!--Side Panel Component -->
+    <!-- Containers within: Question Number Container, Timer Container, Score Container -->
+    <div class="column side_panel_component">
+
+        <!--Question Number Container-->
+        <div class="question_number_container">
+            <h1 id="question_subheading">Results</h1>
+        </div>
+
+        <!--Timer Container-->
+        <div class="timer_container">
+            <h1 class="side_panel_subheading">Difficulty</h1>
+            <h1 id="difficulty"></h1>
+        </div>
+
+        <!--Score Container-->
+        <div class="score_container">
+            <h1 class="side_panel_subheading">Score</h1>
+            <h1 id="score"></h1>
+            <img id="heart_icon_left" src="Assets/heart_red.png" alt="Red Heart">
+            <img id="heart_icon_middle" src="Assets/heart_red.png" alt="Red Heart">
+            <img id="heart_icon_right" src="Assets/heart_red.png" alt="Red Heart">
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Footer Component -->
+    <footer>
+        <div class="footer_component">
+            <h3 id="footer_text">©2021 PT, Inc.</h3>
+        </div>
+    </footer>
+
+</body>
+
+
+<!-- Link External JavaScript -->
+<script src="results.js"></script>
+
+</html>
