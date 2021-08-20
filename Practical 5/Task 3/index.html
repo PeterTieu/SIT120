@@ -30,7 +30,7 @@
             Decimal input:
             <input id="decimal_input" v-model="decimal">
         </h3>
-        <button v-on:click="conver_decimal_to_binary()">Convert to Binary</button>
+        <button v-on:click="convert_decimal_to_binary()">Convert to Binary</button>
         <div><br></div>
         <div>
             <h3>Binary output: </h3>
@@ -47,22 +47,26 @@
         <h3>First player to score 5 wins!</h3>
         <div id="scores_container">
 
+            <!-- Player 1 Score Container -->
             <div class="individual_score_container">
                 <h4>{{player1_score}} </h4>
                 <button v-on:click="player1_increment_score">Player 1+</button>
             </div>
 
+            <!-- Game Status container -->
             <div id="game_status_container">
                 <h4 class="game_status_container_text" v-if="isGameOver">{{gameStatus}} </h4>
                 <h4 class="game_status_container_text" v-else>{{gameStatus}}</h4>
             </div>
 
+            <!-- Player 2 Score Container -->
             <div class="individual_score_container">
                 <h4>{{player2_score}} </h4>
                 <button v-on:click="player2_increment_score">Player 2+</button>
             </div>
         </div>
 
+        <!-- Restart Game Button Container -->
         <div id="restart_game_button_container">
             <button v-on:click="restart_game">RESTART GAME</button>
         </div>
