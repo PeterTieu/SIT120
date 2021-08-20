@@ -9,6 +9,10 @@ var app = new Vue({
 
 });
 
+
+
+// ================== Container: Convert Decimal to Binary ===================================
+
 var convert_decimal_to_binary_container = new Vue({
   el: '#convert_decimal_to_binary_container',
   data: {
@@ -16,7 +20,7 @@ var convert_decimal_to_binary_container = new Vue({
     decimal: '',
   },
   methods: {
-    conver_decimal_to_binary: function () {
+    convert_decimal_to_binary: function () {
 
       var decimal_int = parseInt(this.decimal)
 
@@ -31,6 +35,9 @@ var convert_decimal_to_binary_container = new Vue({
 })
 
 
+
+// ================== Container: Score Tracker Container ===================================
+
 const WINNING_SCORE = 5;
 
 var score_tracker_container = new Vue({
@@ -41,14 +48,19 @@ var score_tracker_container = new Vue({
     gameStatus: 'Game has not started',
     isGameOver: false,
   },
+
   methods: {
+
+    // Increment the Score of Player 1
     player1_increment_score: function () {
 
+      // If the game is stil ongoing
       if (!this.isGameOver) {
 
         this.player1_score++;
         this.gameStatus = 'Game is in Progress'
 
+        // If Player 1 wins
         if (this.player1_score >= WINNING_SCORE) {
           this.gameStatus = 'Player 1 Victory!'
           this.isGameOver = true;
@@ -58,13 +70,16 @@ var score_tracker_container = new Vue({
 
     },
 
+    // Increment the Score of Player 2
     player2_increment_score: function () {
 
+      // If the game is stil ongoing
       if (!this.isGameOver) {
 
         this.player2_score++;
         this.gameStatus = 'Game is in Progress'
 
+        // If Player 2 wins
         if (this.player2_score >= WINNING_SCORE) {
           this.gameStatus = 'Player 2 Victory!'
           this.isGameOver = true;
@@ -73,6 +88,7 @@ var score_tracker_container = new Vue({
       }
     },
 
+    // Restart the Game
     restart_game: function () {
       this.isGameOver = false;
       this.player1_score = 0;
