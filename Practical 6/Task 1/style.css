@@ -1,0 +1,21 @@
+.inputContainer {
+    background-color: khaki;
+    width: 15%;
+}
+
+.input {
+    background-color: greenyellow;
+    width: 90%;
+}
+
+.renderedInput {
+    background-color: rgb(152, 218, 195);
+    width: 100%;
+    font-weight: 600;
+}
+
+button {
+    background-color: rgb(225, 240, 128);
+    color: red;
+    font-weight: 600;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Include the Vue framework-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Set responsiveness to screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Set the title -->
+    <title id="page_title">{{pageTitle}}</title>
+</head>
+
+<body>
+
+    <form id="userForm" action="">
+
+        <h1>User Form</h1>
+
+        <!-- Username Input -->
+        <div class="inputContainer">
+            <label for="usernameInput">Username:</label> <br>
+            <input id="usernameInput" class="input" type="text" v-model="inputedUsername" placeholder="Enter username">
+            <br><br> Entered username:
+            <div class="renderedInput">-> {{inputedUsername}}</div>
+        </div>
+
+        <br><br>
+
+        <!-- Password Input -->
+        <div class="inputContainer">
+            <label for="passwordInput">Password:</label> <br>
+            <input id="passwordInput" class="input" type="password" v-model="inputedPassword"
+                placeholder="Enter password">
+            <br><br> Entered password:
+            <div class="renderedInput">-> {{inputedPassword}}</div>
+        </div>
+
+        <br><br>
+
+        <!-- Email Input -->
+        <div class="inputContainer">
+            <label for="emailInput">Email:</label> <br>
+            <input id="emailInput" class="input" type="text" v-model="inputedEmail" placeholder="example@gmail.com">
+            <br><br> Entered email:
+            <div class="renderedInput">-> {{inputedEmail}}</div>
+        </div>
+
+        <br><br>
+
+        <button v-on:click="checkInput">Submit</button>
+
+    </form>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

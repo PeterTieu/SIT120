@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Include the Vue framework-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Set responsiveness to screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Set the title -->
+    <title id="page_title">{{pageTitle}}</title>
+</head>
+
+<body>
+    <div id="days_available_container" class="demo">
+
+        <h1>Days available</h1>
+
+        <!-- Monday -->
+        <div class="day_checkbox">
+            <input type="checkbox" id="monday" value="Monday" v-model="checkedDays" />
+            <label for="monday">Monday</label>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="day_checkbox">
+            <input type="checkbox" id="tuesday" value="Tuesday" v-model="checkedDays" />
+            <label for="tuesday">Tuesday</label>
+        </div>
+
+        <!-- Wednesday -->
+        <div class="day_checkbox">
+            <input type="checkbox" id="wednesday" value="Wednesday" v-model="checkedDays" />
+            <label for="wednesday">Wednesday</label>
+        </div>
+
+        <!-- Thursday -->
+        <div class="day_checkbox">
+            <input type="checkbox" id="thursday" value="Thursday" v-model="checkedDays" />
+            <label for="thursday">Thursday</label>
+        </div>
+
+        <!-- Friday -->
+        <div class="day_checkbox">
+            <input type="checkbox" id="friday" value="Friday" v-model="checkedDays" />
+            <label for="friday">Friday</label>
+        </div>
+
+        <br><br>
+
+        Checked Days:
+        <div id="checked_days">{{checkedDays}}</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

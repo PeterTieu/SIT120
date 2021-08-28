@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Include the Vue framework-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Set responsiveness to screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Set the title -->
+    <title id="page_title">{{title}}</title>
+</head>
+
+<body>
+    <h1>Modifier Form</h1>
+
+    <form id="modifierForm">
+
+        <!-- Name Input -->
+        <label for="nameInput">Name: </label> <br>
+        <input id="nameInput" type="text" v-model.lazy.trim="inputtedName" placeholder="Enter name">
+        <div>{{inputtedName}}</div>
+        <br><br>
+
+        <!-- Username Input -->
+        <label for="usernameInput">Username: </label> <br>
+        <input id="usernameInput" type="text" v-model.lazy.trim="inputtedUsername" placeholder="Enter username">
+        <div>{{inputtedUsername}}</div>
+        <br><br>
+
+        <!-- Age Input -->
+        <label for="ageInput">Age: </label> <br>
+        <input id="ageInput" type="text" v-model.number="inputtedAge" placeholder="Enter age">
+        <div>{{inputtedAge}}</div>
+        <br><br>
+
+        <button v-on:click="storeInputs">Submit</button>
+
+    </form>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Include the Vue framework-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Set responsiveness to screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Set the title -->
+    <title id="page_title">{{pageTitle}}</title>
+</head>
+
+<body>
+    <h1>Enquiry Type</h1>
+
+    <!-- Dropdown List -->
+    <div id="dropdown_list">
+
+        <select v-model="selected">
+            <!-- Disabled Option -->
+            <option disabled value="">Select An Option</option>
+
+            <!-- All selectable options -->
+            <option v-for="option in options" v-bind:value="option.value">
+                {{ option.text }}
+            </option>
+        </select>
+
+        <span>Selected: {{ selected }}</span>
+
+        <button v-on:click="selectListener">Send</button>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
