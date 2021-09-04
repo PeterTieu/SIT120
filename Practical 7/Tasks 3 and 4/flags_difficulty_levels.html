@@ -59,7 +59,8 @@
 
         <!-- Difficulty Level Component -->
         <difficulty-level-component id="difficulty_level_component" v-for="difficulty_level in difficulty_levels"
-            v-bind:difficulty_level="difficulty_level.level">
+            v-bind:difficulty_level="difficulty_level.level"
+            v-on:load-new-page=load_flags_challenge_page(difficulty_level.level)>
             <p> {{difficulty_level=difficulty_level.level}} </p>
         </difficulty-level-component>
 
