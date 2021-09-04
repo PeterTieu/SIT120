@@ -1,0 +1,26 @@
+html {
+    background-color: rgb(222, 237, 238);
+}
+
+body {
+    margin: 1.2em;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: rgb(169, 14, 9);
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+img {
+    width: 20%;
+}
+
+hr {
+    width:50%;
+    text-align:left;
+    margin-left:0
+}

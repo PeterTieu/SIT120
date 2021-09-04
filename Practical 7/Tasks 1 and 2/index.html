@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Include the Vue framework-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Set responsiveness to screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Set the title -->
+    <title id="page_title">{{pageTitle}}</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- Component #1: Local Registration -->
+        <!-- Props: Static - Objects -->
+        <country-name-and-map country-name="Canada" country-map="https://i.infopls.com/images/mapcanada.gif">
+        </country-name-and-map>
+
+        <hr>
+
+        <!-- Component #2: Local Registration -->
+        <!-- Props: Dynamic - Objects -->
+        <country-information v-bind:capitalcity="capitalcity" v-bind:population="population" v-bind:landsize="landsize">
+        </country-information>
+
+        <hr>
+
+        <!-- Component #3: Global Registration -->
+        <!-- Props: Static - Array of Strings -->
+        <country-link-buttons wikipedia_link="https://en.wikipedia.org/wiki/Canada"
+            national_website_link="https://www.canada.ca/en.html">
+        </country-link-buttons>
+
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
